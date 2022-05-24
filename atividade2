@@ -1,0 +1,44 @@
+string: bemVindo = "Olá, Sua participacão é muito Importante para nós da Sanivis!";
+alert (bemVindo)
+
+let relatorio = []
+let opcao = 's'
+
+while(opcao == 's')
+{
+   let nome = prompt ("Insira seu nome completo")
+   let idade = prompt ("Informe sua Idade:")
+    if (idade > 18)
+    { 
+
+         if (relatorio.length < 100)
+        {
+            opcao = prompt ('finalizar inscrição? (s ou n)')
+            alert ("Sua Inscrição foi realizada com Sucesso!")
+    
+        }
+        else
+        {
+            alert ('Infelizmente foi excedido o número máximo de inscrições')
+        }
+    }     
+    else
+    {
+
+    alert ("Infelizmente esse evento é destinado à maiores de idade!")
+
+    }
+
+
+opcao = prompt ('Deseja realizar uma nova inscrição? (s ou n)')
+
+}
+impress = 1
+
+while (impress < relatorio.length)
+{
+ console.log(relatorio)
+ impress++
+}
+string: fim = "Obrigado por sua participação!";
+alert (fim)
