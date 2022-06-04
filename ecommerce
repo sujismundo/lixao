@@ -1,0 +1,69 @@
+class Pessoa{
+    constructor(cNome, cEnd){
+   this.Nome = cNome;
+   this.End = cEnd;
+    }
+    get Nome() {return this.nomecliente};
+    set Nome(cNome) {this.nomecliente = cNome};
+    get End() {return this.endcliente};
+    set End(cEnd) {this.endcliente = cEnd};
+
+    toString(){
+        return `Nome: ${this.nomecliente} \nEndereço: ${this.endcliente}`;
+    }
+}
+
+//FISICA
+
+class Ps_fisica extends Pessoa {
+      constructor(cNome,cEnd,cCpf,cDatanasc){
+        super(cNome,cEnd);
+        this.Cpf = cCpf;
+        this.Datanasc = cDatanasc;
+              }
+
+      get Cpf () {return this.cpfcliente};
+      set Cpf (cCpf){this.cpfcliente = cCpf};
+      get Datanasc () {return this.dtcliente};
+      set Datanasc(cDatanasc) {this.dtcliente = cDatanasc};
+
+
+                toString(){
+                   let volta = super.toString();
+                   volta = volta + `\nCPF: ${this.cpfcliente} \nDATA NASCIMENTO: ${this.dtcliente}`;
+                   return volta;
+                }
+            }
+
+//JURIDICO
+                class Ps_Juridica extends Pessoa {
+                    constructor(cNome,cEnd,cCnpj,cRazsocial,){
+                      super(cNome,cEnd);
+                      this.Cnpj = cCnpj;
+                      this.Razsocial = cRazsocial;
+                            }
+              
+                    get Cnpj () {return this.cnpjcliente};
+                    set Cnpj (cCnpj){this.cnpjcliente = cCnpj};
+                    get Razsocial () {return this.razaocliente};
+                    set Razsocial(cRazsocial) {this.razaocliente = cRazsocial};
+              
+              
+                              toString(){
+                                 let volta = super.toString();
+                                 volta = volta + `\nCNPJ: ${this.cnpjcliente} \nRazão Social: ${this.razaocliente}`;
+                                 return volta;
+                              }
+                            }
+
+
+
+//var cliente = new Pessoa("Lucas Cesário","beco do broklin");
+//console.log(cliente.toString());
+
+//var cliente = new Ps_fisica("Lucas Cesário", "Rua 1500", "063.554.429-60", "13/07/1986");
+//console.log(cliente.toString());
+
+
+var cliente = new Ps_Juridica("Atikus Aquicultura", "Rua 1500", "28 003 0001 60", "Atikus ME");
+console.log(cliente.toString());
