@@ -1,0 +1,19 @@
+public class Principal {
+
+  public static void main(String[] args) {
+        DAO_produtos obj_produtos = new DAO_produtos();
+
+        //Consultar Produtos
+        //obj_produtos.consultar();
+
+        //Inserir produtos
+
+        //Produto novoProduto = new Produto(7,"Cerveja",5.00,10,1);
+        //obj_produtos.inserir(novoProduto);
+
+        //Alterar produto
+       // Produto produtoalterado = new Produto(7,"Cerveja alterado", 2.5,1,2);
+        //obj_produtos.alterar(produtoalterado);
+
+        // EXCLUIR PRODUTO
+        obj_produtos.excluir(4);
